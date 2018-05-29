@@ -1,4 +1,5 @@
 import fp from 'mostly-func';
+import getFeedType from './get-feed-type';
 
 /**
  * add and copy activities to feeds
