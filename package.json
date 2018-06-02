@@ -1,7 +1,7 @@
 {
   "name": "playing-feed-common",
   "version": "1.0.2",
-  "description": "Feed utilities for playful applications",
+  "description": "Feed common for playful applications",
   "author": "Forafish",
   "license": "MIT",
   "main": "index.js",
