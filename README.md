@@ -1,7 +1,7 @@
 Playing Feed Common
 ===================
 
-Feed common for playful applications.
+Feed common utilites for building playful applications.
 
 # Usage
 
