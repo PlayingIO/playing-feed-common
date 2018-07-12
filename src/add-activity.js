@@ -1,10 +1,10 @@
-import fp from 'mostly-func';
-import getFeedType from './get-feed-type';
+const fp = require('mostly-func');
+const getFeedType = require('./get-feed-type');
 
 /**
  * add and copy activities to feeds
  */
-export default async function addActivity (app, activity, ...feeds) {
+module.exports = async function addActivity (app, activity, ...feeds) {
   const svcFeedsActivities = app.service('feeds/activities');
   feeds = fp.uniq(fp.flatten(feeds));
 
@@ -15,4 +15,4 @@ export default async function addActivity (app, activity, ...feeds) {
   // carbon copy to tail feeds
   activity.cc = (activity.cc || []).concat(tail);
   return svcFeedsActivities.create(activity, { primary: first });
-}
+};

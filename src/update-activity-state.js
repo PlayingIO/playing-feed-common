@@ -1,9 +1,9 @@
-import fp from 'mostly-func';
+const fp = require('mostly-func');
 
 /**
  * Update state of activities
  */
-export default async function updateActivityState (app, activity) {
+module.exports = async function updateActivityState (app, activity) {
   const svcFeedsActivities = app.service('feeds/activities');
   const feeds = fp.reject(fp.isNil, [activity.feed].concat(activity.source || activity.cc));
   // update activity in all feeds by foreignId/time
@@ -16,4 +16,4 @@ export default async function updateActivityState (app, activity) {
     });
   });
   return Promise.all(updateAll(feeds));
-}
+};

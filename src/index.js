@@ -1,10 +1,10 @@
-import addActivity from './add-activity';
-import getFeedType from './get-feed-type';
-import getPendingActivity from './get-pending-activity';
-import updateActivityState from './update-activity-state';
-import notify from './hooks/notify';
+const addActivity = require('./add-activity');
+const getFeedType = require('./get-feed-type');
+const getPendingActivity = require('./get-pending-activity');
+const updateActivityState = require('./update-activity-state');
+const notify = require('./hooks/notify');
 
-export default {
+module.exports = {
   addActivity,
   getFeedType,
   getPendingActivity,

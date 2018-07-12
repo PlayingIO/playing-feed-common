@@ -1,12 +1,12 @@
-import makeDebug from 'debug';
-import { errors } from 'feathers-errors';
-import fp from 'mostly-func';
+const makeDebug = require('debug');
+const { errors } = require('feathers-errors');
+const fp = require('mostly-func');
 
-import addActivity from '../add-activity';
+const addActivity = require('../add-activity');
 
 const debug = makeDebug('playing:feed-services:hooks:notify');
 
-export default function notify (event, notifiers) {
+module.exports = function notify (event, notifiers) {
   return async context => {
     if (notifiers[event]) {
       const notifer = notifiers[event](context);
@@ -23,4 +23,4 @@ export default function notify (event, notifiers) {
       throw new Error('No such notifer found for ' + event);
     }
   };
-}
+};
