@@ -1,5 +1,4 @@
 const makeDebug = require('debug');
-const { errors } = require('feathers-errors');
 const fp = require('mostly-func');
 
 const addActivity = require('../add-activity');
