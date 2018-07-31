@@ -12,7 +12,7 @@ Please see the [documentation site](https://playingio.github.io) for more detail
 ## Installation
 
 ```bash
-npm install playing-feed-common
+npm install playing-feed-common --save
 ```
 
 # License
